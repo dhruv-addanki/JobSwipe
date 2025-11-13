@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @EnvironmentObject private var environment: AppEnvironment
+
     var body: some View {
         TabView {
             NavigationStack {
-                FeedView()
+                FeedView(jobAPI: environment.jobAPI)
             }
             .tabItem {
                 Label("Feed", systemImage: "app.badge.fill")
@@ -36,4 +38,6 @@ struct RootTabView: View {
 
 #Preview {
     RootTabView()
+        .environmentObject(AppEnvironment())
+        .modelContainer(ModelContainerProvider.shared(inMemory: true))
 }

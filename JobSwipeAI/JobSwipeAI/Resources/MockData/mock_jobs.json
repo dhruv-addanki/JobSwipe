@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mock-1",
+    "title": "Senior iOS Engineer",
+    "companyName": "SwiftWorks",
+    "location": "San Francisco, CA",
+    "isRemote": true,
+    "employmentType": "fullTime",
+    "salaryMin": 160000,
+    "salaryMax": 190000,
+    "currency": "USD",
+    "description": "SwiftWorks is building the next generation of productivity software and needs a seasoned iOS lead.",
+    "requirements": [
+      "7+ years of professional iOS experience",
+      "Deep Swift and SwiftUI knowledge",
+      "Experience shipping complex consumer apps"
+    ],
+    "responsibilities": [
+      "Own the mobile roadmap",
+      "Collaborate with AI/ML team",
+      "Mentor a distributed squad"
+    ],
+    "postedAt": "2024-10-01T00:00:00Z",
+    "source": {
+      "type": "mock"
+    }
+  },
+  {
+    "id": "mock-2",
+    "title": "Mobile Architect",
+    "companyName": "JobMatch AI",
+    "location": "Remote",
+    "isRemote": true,
+    "employmentType": "contract",
+    "salaryMin": 120000,
+    "salaryMax": 145000,
+    "currency": "USD",
+    "description": "Join JobMatch to design a modular architecture that powers thousands of job seekers.",
+    "requirements": [
+      "Expertise in modular SwiftUI apps",
+      "Comfort with GraphQL/REST",
+      "LLM integration experience"
+    ],
+    "responsibilities": [
+      "Define architectural guardrails",
+      "Review critical PRs",
+      "Prototype AI-powered flows"
+    ],
+    "postedAt": "2024-09-25T00:00:00Z",
+    "source": {
+      "type": "mock"
+    }
+  },
+  {
+    "id": "mock-3",
+    "title": "Lead Mobile Engineer",
+    "companyName": "HireSwipe",
+    "location": "New York, NY",
+    "isRemote": false,
+    "employmentType": "fullTime",
+    "salaryMin": 180000,
+    "salaryMax": 210000,
+    "currency": "USD",
+    "description": "Own the swipe-to-apply experience for millions of candidates.",
+    "requirements": [
+      "Leadership experience",
+      "SwiftData + async/await mastery",
+      "Great communication"
+    ],
+    "responsibilities": [
+      "Lead a cross-functional pod",
+      "Ship polished UI",
+      "Collaborate with recruiters"
+    ],
+    "postedAt": "2024-08-15T00:00:00Z",
+    "source": {
+      "type": "mock"
+    }
+  }
+]
