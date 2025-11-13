@@ -32,6 +32,8 @@
 		E8A799ABF6444AD88E0BF84F2AB07EBD /* MockJobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FC87CD26B4DB595435C4973921015 /* MockJobAPI.swift */; };
 		F18C2F0D2A1443938DCF0A6FC13C083C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618628D7C944A708738AA1DF4282A34 /* UserProfile.swift */; };
 		FEF7B8C0B68944E0B7C3EF9649ACA705 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FE5D4940A4F44A70EF18F3FA445C6 /* HTTPClient.swift */; };
+		14E566A39F6245779060986181638884 /* RemotiveJobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BA886902D495CB51E856D41F55AAB /* RemotiveJobAPI.swift */; };
+		A7F7D52801044F48B64D18AEF64316CA /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B7D9248E44E8CAB5A420A2E21238E /* String+HTML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		D1FE3A657CF04384A3F00004D0C45872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92DE1A7D6094E67B3CB58DE3D445C4A /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
 		FB928FF07182402B801B9BBDE6E38D94 /* JobSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSource.swift; sourceTree = "<group>"; };
+		496BA886902D495CB51E856D41F55AAB /* RemotiveJobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotiveJobAPI.swift; sourceTree = "<group>"; };
+		1D6B7D9248E44E8CAB5A420A2E21238E /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		46BEF6517B07428AA93475F3ED308B47 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1D6B7D9248E44E8CAB5A420A2E21238E /* String+HTML.swift */
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -237,7 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				813EABF11FF04E7F8D80B5A2EADD2928 /* JobAPI.swift */,
-				4B1FC87CD26B4DB595435C4973921015 /* MockJobAPI.swift */
+				4B1FC87CD26B4DB595435C4973921015 /* MockJobAPI.swift */,
+				496BA886902D495CB51E856D41F55AAB /* RemotiveJobAPI.swift */
 			);
 			path = JobAPI;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 				D8D028230D454D46B00BB2CBF9DB53B1 /* ApplicationsView.swift in Sources */,
 				196AC3A41CC8438BB2B93957B7E91965 /* ProfileView.swift in Sources */,
 				191CA0DF31334E6E98D262DFF10B2887 /* ProfileViewModel.swift in Sources */,
+				14E566A39F6245779060986181638884 /* RemotiveJobAPI.swift in Sources */,
+				A7F7D52801044F48B64D18AEF64316CA /* String+HTML.swift in Sources */,
 				50C95DD3862642B78F0D893156CABD94 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

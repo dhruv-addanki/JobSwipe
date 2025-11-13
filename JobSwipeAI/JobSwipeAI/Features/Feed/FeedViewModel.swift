@@ -6,9 +6,13 @@ final class FeedViewModel: ObservableObject {
     @Published private(set) var isLoading = false
     @Published var errorMessage: String?
 
-    private let jobAPI: JobAPI
+    private var jobAPI: JobAPI
 
-    init(jobAPI: JobAPI) {
+    init(jobAPI: JobAPI = MockJobAPI()) {
+        self.jobAPI = jobAPI
+    }
+
+    func updateJobAPI(_ jobAPI: JobAPI) {
         self.jobAPI = jobAPI
     }
 

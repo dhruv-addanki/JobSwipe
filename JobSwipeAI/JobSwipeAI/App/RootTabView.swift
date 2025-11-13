@@ -6,7 +6,7 @@ struct RootTabView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                FeedView(jobAPI: environment.jobAPI)
+                FeedView()
             }
             .tabItem {
                 Label("Feed", systemImage: "app.badge.fill")
