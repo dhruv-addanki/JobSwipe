@@ -23,7 +23,7 @@ struct FeedView: View {
                 )
             } else {
                 List {
-                    Section(\"Source: \\(environment.currentJobProviderName)\") {
+                    Section("Source: \(environment.currentJobProviderName)") {
                         ForEach(viewModel.jobs) { job in
                             FeedJobCardView(job: job)
                                 .listRowSeparator(.hidden)
@@ -63,10 +63,10 @@ private struct FeedTaskToken: Hashable {
     let apiID: ObjectIdentifier
 }
 
-#Preview {
-    NavigationStack {
-        FeedView()
-            .modelContainer(ModelContainerProvider.shared(inMemory: true))
-            .environmentObject(AppEnvironment(useMockJobs: true))
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        FeedView()
+//            .modelContainer(ModelContainerProvider.shared(inMemory: true))
+//            .environmentObject(AppEnvironment(useMockJobs: true))
+//    }
+//}
