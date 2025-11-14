@@ -1,6 +1,6 @@
 import Foundation
 
-/// Central place to wire up shared services and toggle between mock/remote data sources.
+// Central place to wire up shared services and toggle between mock/remote data sources.
 @MainActor
 final class AppEnvironment: ObservableObject {
     @Published private(set) var jobAPI: JobAPI
@@ -9,22 +9,23 @@ final class AppEnvironment: ObservableObject {
     }
     @Published var remoteSearchTerm: String {
         didSet {
-            remotiveAPI.updateDefaultSearchTerm(remoteSearchTerm)
+            adzunaAPI.updateDefaultSearchTerm(remoteSearchTerm)
         }
     }
 
     private let mockAPI = MockJobAPI()
-    private let remotiveAPI: RemotiveJobAPI
+    private let adzunaAPI: AdzunaJobAPI
 
     init(
         useMockJobs: Bool = true,
-        remoteConfiguration: RemotiveJobAPIConfiguration = .default
+        adzunaConfiguration: AdzunaJobAPIConfiguration = .default
     ) {
-        self.remotiveAPI = RemotiveJobAPI(configuration: remoteConfiguration)
-        self.useMockJobs = useMockJobs
-        self.remoteSearchTerm = remoteConfiguration.defaultSearchTerm
-        self.jobAPI = useMockJobs ? mockAPI : remotiveAPI
-        self.remotiveAPI.updateDefaultSearchTerm(remoteConfiguration.defaultSearchTerm)
+        self.adzunaAPI = AdzunaJobAPI(configuration: adzunaConfiguration)
+        let shouldUseMock = useMockJobs || !adzunaConfiguration.isConfigured
+        self.useMockJobs = shouldUseMock
+        self.remoteSearchTerm = adzunaConfiguration.defaultSearchTerm
+        self.jobAPI = shouldUseMock ? mockAPI : adzunaAPI
+        self.adzunaAPI.updateDefaultSearchTerm(adzunaConfiguration.defaultSearchTerm)
     }
 
     var jobAPISourceID: ObjectIdentifier {
@@ -32,10 +33,23 @@ final class AppEnvironment: ObservableObject {
     }
 
     var currentJobProviderName: String {
-        useMockJobs ? "Mock dataset" : remotiveAPI.providerName
+        (jobAPI as? MockJobAPI) != nil ? "Mock dataset" : adzunaAPI.providerName
+    }
+
+    var isRemoteProviderConfigured: Bool {
+        adzunaAPI.isConfigured
     }
 
     private func refreshJobAPI() {
-        jobAPI = useMockJobs ? mockAPI : remotiveAPI
+        if useMockJobs {
+            jobAPI = mockAPI
+        } else if adzunaAPI.isConfigured {
+            jobAPI = adzunaAPI
+        } else {
+            jobAPI = mockAPI
+            if !useMockJobs {
+                useMockJobs = true
+            }
+        }
     }
 }

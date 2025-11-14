@@ -24,6 +24,16 @@ struct SettingsView: View {
                 Text("Provider: \(environment.currentJobProviderName)")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
+                if !environment.isRemoteProviderConfigured {
+                    Label {
+                        Text("Add your Adzuna API keys in AdzunaJobAPI.swift to enable live data.")
+                    } icon: {
+                        Image(systemName: "exclamationmark.triangle")
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.orange)
+                    .fixedSize(horizontal: false, vertical: true)
+                }
             }
 
             Section("LLM") {

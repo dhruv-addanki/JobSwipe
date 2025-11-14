@@ -6,6 +6,7 @@ enum APIError: Error, LocalizedError {
     case serverError(statusCode: Int)
     case transport(Error)
     case missingData
+    case notConfigured(message: String)
 
     var errorDescription: String? {
         switch self {
@@ -19,6 +20,8 @@ enum APIError: Error, LocalizedError {
             return error.localizedDescription
         case .missingData:
             return "Response missing required data"
+        case .notConfigured(let message):
+            return message
         }
     }
 }

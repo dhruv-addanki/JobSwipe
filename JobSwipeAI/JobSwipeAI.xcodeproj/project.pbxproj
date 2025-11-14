@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D2BC598FE754168A70CE3CC3D1A9B22 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0151FA2FF484D4289D5A9A8601A50B5 /* FeedView.swift */; };
 		14D46CBD0D3E48C0917A2E2DD0D47B06 /* JobSwipeAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5821C63D07F47DBAB709441A5AD6D4E /* JobSwipeAIApp.swift */; };
+		15108C08F4444F26847CA3D7B4850651 /* AdzunaJobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93159FC38E5B4852A4FD919A7E3B1A8B /* AdzunaJobAPI.swift */; };
 		191CA0DF31334E6E98D262DFF10B2887 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2F45E6A06F4AE6AD0BEBC004000E29 /* ProfileViewModel.swift */; };
 		196AC3A41CC8438BB2B93957B7E91965 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4303735CCA24C28B2159CD7E1A2E986 /* ProfileView.swift */; };
 		2193C7D877764388AB06C42E8D261D79 /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813EABF11FF04E7F8D80B5A2EADD2928 /* JobAPI.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0011E95526AA4EFCB5353E09323AFF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0142A5DEAEAE49E18CE0F27EC156F7D9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		93159FC38E5B4852A4FD919A7E3B1A8B /* AdzunaJobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdzunaJobAPI.swift; sourceTree = "<group>"; };
 		0618628D7C944A708738AA1DF4282A34 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		1129AD6E93514A158BA6A9A44F0F4FA4 /* JobSwipeAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobSwipeAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C9C5B6F8D4AB493B0E69B44D82038 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
@@ -243,7 +245,8 @@
 			children = (
 				813EABF11FF04E7F8D80B5A2EADD2928 /* JobAPI.swift */,
 				4B1FC87CD26B4DB595435C4973921015 /* MockJobAPI.swift */,
-				496BA886902D495CB51E856D41F55AAB /* RemotiveJobAPI.swift */
+				496BA886902D495CB51E856D41F55AAB /* RemotiveJobAPI.swift */,
+				93159FC38E5B4852A4FD919A7E3B1A8B /* AdzunaJobAPI.swift */
 			);
 			path = JobAPI;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				196AC3A41CC8438BB2B93957B7E91965 /* ProfileView.swift in Sources */,
 				191CA0DF31334E6E98D262DFF10B2887 /* ProfileViewModel.swift in Sources */,
 				14E566A39F6245779060986181638884 /* RemotiveJobAPI.swift in Sources */,
+				15108C08F4444F26847CA3D7B4850651 /* AdzunaJobAPI.swift in Sources */,
 				A7F7D52801044F48B64D18AEF64316CA /* String+HTML.swift in Sources */,
 				50C95DD3862642B78F0D893156CABD94 /* SettingsView.swift in Sources */,
 			);
