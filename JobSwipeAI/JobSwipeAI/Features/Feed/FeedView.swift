@@ -99,7 +99,7 @@ struct FeedView: View {
         VStack(spacing: 24) {
             GeometryReader { proxy in
                 let width = proxy.size.width
-                cacheDeckWidth(width)
+                let _ = cacheDeckWidth(width)
                 ZStack {
                     ForEach(Array(viewModel.jobs.prefix(3).enumerated()), id: \.element.id) { index, job in
                         let isTopCard = index == 0
@@ -111,7 +111,7 @@ struct FeedView: View {
                             .zIndex(Double(viewModel.jobs.count - index))
                             .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 8)
                             .allowsHitTesting(isTopCard)
-                            .gesture(isTopCard ? dragGesture(containerWidth: width) : nil)
+                            .gesture(dragGesture(containerWidth: width))
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
